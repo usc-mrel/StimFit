@@ -142,12 +142,13 @@ end
 end
 
 %   Save Data
-switch opt.lsq.Ncomp
-    case 1
-        save('./StimFit.mat','img','opt','T2','amp','B1');
-    case 2
-        save('./StimFit_2_Components.mat','img','opt','T2','amp','B1');
-    case 3
-        save('./StimFit_3_Components.mat','img','opt','T2','amp','B1');
+if opt.debug
+    switch opt.lsq.Ncomp
+        case 1
+            save('./StimFit.mat','img','opt','T2','amp','B1');
+        case 2
+            save('./StimFit_2_Components.mat','img','opt','T2','amp','B1');
+        case 3
+            save('./StimFit_3_Components.mat','img','opt','T2','amp','B1');
+    end
 end
-
